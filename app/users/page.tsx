@@ -7,7 +7,7 @@ name:string;
 }
 
 const UsersPage = async () => {
-
+const {cardContainer}=styles
    const res= await fetch('https://jsonplaceholder.typicode.com/users',{
     next:{revalidate:10}
    });
@@ -17,12 +17,13 @@ const UsersPage = async () => {
   return (<section>
     <h1>Users</h1>
    
-    <ul>{users.map(x=><li key={x?.id} className={styles.cardContainer}>
+    <ul>{users.map(x=><li key={x?.id} className={cardContainer}>
         <p>{new Date().toLocaleTimeString()}</p>
         {x?.name}
     </li>)}</ul>
     </section>
   )
 }
+
 
 export default UsersPage
