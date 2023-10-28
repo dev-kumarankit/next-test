@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import HeaderSection from './components/Common/HeaderSection'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,10 @@ export default function RootLayout({
   //file for defining common layout for pages
   return (
     <html lang="en" data-theme="winter">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HeaderSection />
+        {children}
+      </body>
     </html>
   )
 }
