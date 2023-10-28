@@ -14,6 +14,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  //file for defining common layout for pages
   return (
     <html lang="en" data-theme="winter">
       <body className={inter.className}>{children}</body>
