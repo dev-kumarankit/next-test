@@ -15,7 +15,7 @@ interface Props {
 const UserTable = async ({ sortType }: Props) => {
     const { cardContainer } = styles
     const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-        next: { revalidate: 10 }
+        cache: 'no-store'
     });
     //cache:'no-store'
     //next:{revalidate:10}

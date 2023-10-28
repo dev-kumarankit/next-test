@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" data-theme="winter">
       <body className={inter.className}>
         <HeaderSection />
+
         {children}
       </body>
     </html>
